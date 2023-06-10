@@ -12,7 +12,7 @@
     "@atlaskit/button": "^16.3.9",
     "@atlaskit/css-reset": "^6.3.15",
     "@compiled/react": "^0.11.1",
-    "@forge/bridge": "^2.4.0",
+    "@forge/bridge": "^2.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "stylelint": "^14.13.0",

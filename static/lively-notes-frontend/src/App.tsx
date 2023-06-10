@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App" style={{ textAlign: "center", alignItems: "center" }}>
       <img src={SuperForgeBlob} height="300" width="400" />
-      <h1>⚡Super⚡</h1>
-      <h2>A super charged Forge project template</h2>
+      <h1>⚡Huhu!</h1>
+      <h2>A</h2>
       <p style={{ color: "blue" }}>by Innovation Nation</p>
       <p>{data}</p>
     </div>

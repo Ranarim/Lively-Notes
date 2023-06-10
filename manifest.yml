@@ -1,18 +1,18 @@
 modules:
   macro:
-    - key: super-forge
-      resource: super-forge-frontend
+    - key: lively-notes
+      resource: lively-notes-frontend
       resolver:
         function: resolver
-      title: Super-Forge
-      description: Inserts a blank project template
+      title: Lively Notes
+      description: An app which uses AI to summarize meeting notes.
   function:
     - key: resolver
       handler: index.handler
 
 resources:
-  - key: super-forge-frontend
-    path: static/super-forge-frontend/dist
+  - key: lively-notes-frontend
+    path: static/lively-notes-frontend/dist
     tunnel:
       port: 3001
 permissions:
