@@ -19,3 +19,5 @@ permissions:
   content:
     styles:
       - unsafe-inline
+app:
+  id: ari:cloud:ecosystem::app/56fc7708-4f82-4ae4-b58e-ecfef4d1c3be
