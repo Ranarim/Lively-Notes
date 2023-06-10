@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { invoke, Modal } from '@forge/bridge';
+import { Modal } from '@forge/bridge';
 
 function App() {
   const [summary, setSummary] = useState("null");
@@ -7,8 +7,8 @@ function App() {
 
   const openModal = () => {
     const modal = new Modal({
-      resource: 'main-app',
-      onClose: (payload) => {},
+      resource: 'modal-view',
+      onClose: (payload: any) => {},
       size: 'large',
       context: {
         description,
@@ -18,12 +18,12 @@ function App() {
     modal.open();
   };
 
-  useEffect(() => {
-    openModal();
-  }, []);
 
   return (
     <>
+    <button onClick={openModal}>
+      Click to Open Modal
+    </button>
     </>
   );
 }

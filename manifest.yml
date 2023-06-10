@@ -15,6 +15,10 @@ resources:
     path: static/lively-notes-frontend/dist
     tunnel:
       port: 3001
+  - key: modal-view
+    path: static/modal-view/dist
+    tunnel:
+      port: 3002
 permissions:
   content:
     styles:
