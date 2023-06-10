@@ -1,23 +1,33 @@
-import React, { useState, useEffect } from "react";
-import { getText } from "./api/handler";
-import "@atlaskit/css-reset";
-import SuperForgeBlob from "./assets/super-forge-blob.gif";
+import React, { useEffect, useState } from 'react';
+import { invoke, Modal } from '@forge/bridge';
+import Button from '@atlaskit/button/standard-button';
 
 function App() {
-  const [data, setData] = useState<string>();
+  const [summary, setSummary] = useState("null");
+  const [description, setDescription] = useState("null");
 
-  useEffect(() => {
-    getText().then((response) => setData(response.data));
-  }, []);
+  const openModal = () => {
+    const modal = new Modal({
+      resource: 'main-app',
+      onClose: (payload) => {},
+      size: 'medium',
+      context: {
+        description,
+        summary,
+      },
+    });
+    modal.open();
+  };
 
   return (
-    <div className="App" style={{ textAlign: "center", alignItems: "center" }}>
-      <img src={SuperForgeBlob} height="300" width="400" />
-      <h1>⚡Huhu!</h1>
-      <h2>A</h2>
-      <p style={{ color: "blue" }}>by Innovation Nation</p>
-      <p>{data}</p>
-    </div>
+    <>
+      <Button
+        appearance="primary"
+        onClick={openModal}
+      >
+        Open Sample App!
+      </Button>
+    </>
   );
 }
 
